@@ -117,7 +117,7 @@ def main():
     # Create a thread for conversation
     thread_id = create_thread()
 
-    user_query_prompt = "Please provide your preferences for TikTok trends (e.g., region, count): "
+    user_query_prompt = "Please provide your preferences for TikTok trends (e.g., region(us, ind), count): "
     user_query = input(user_query_prompt)
     assistant_id = os.getenv("OPENAI_ASSISTANT_ID")
     
