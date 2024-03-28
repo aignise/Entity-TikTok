@@ -1,5 +1,12 @@
-__pycache__/
-.pytest_cache/
+# Virtual environment
+venv/
+
+# IDE files
+.idea/
 .vscode/
+
+# Compiled Python files
+*.pyc
+
+# Environment variables
 .env
-.DS_Store
