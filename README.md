@@ -2,6 +2,41 @@
 
 This Flask app allows users to explore TikTok trends and find videos based on their specific criteria. It integrates with the OpenAI API to provide conversational assistance in gathering user preferences and retrieving relevant TikTok data.
 
+# Fetch TikTok Data Function
+
+This Python function `fetch_tiktok_data` retrieves TikTok data based on the specified region.
+
+## Parameters
+
+- `region` (str): The region code for TikTok trends (e.g., "us" for the United States, "ind" for India).
+- `count` (int): The number of TikTok trends to retrieve (default is 10).
+
+## Returns
+
+The function returns TikTok data as a JSON object if the request is successful. Otherwise, it returns None.
+
+# Main Program
+
+This Python script interacts with the OpenAI API to provide assistance for TikTok trends analysis and general queries.
+
+## Setup
+
+- The environment variables required for the OpenAI API key and RapidAPI key are loaded using `load_dotenv`.
+- The `openai` and `os` modules are imported to handle OpenAI API requests and access environment variables.
+- The `entity` module is imported to use functions for creating threads, starting conversations, and getting responses.
+
+## Main Function
+
+The `main` function:
+1. Creates a thread for conversation.
+2. Prompts the user to provide their region preferences for TikTok trends.
+3. Sets up the OpenAI assistant.
+4. Starts the conversation with the user.
+5. Continuously retrieves responses from the OpenAI API.
+6. Asks the user if further assistance is needed.
+7. Based on the user's response, either requests TikTok analysis again or provides general assistance.
+
+
 ## Features
 
 - **Initiate Conversation**: Welcomes users and explains how the app can help them explore TikTok trends.
